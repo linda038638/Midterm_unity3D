@@ -6,25 +6,37 @@ namespace Misun
     public class Bullet : MonoBehaviour
     {
 
+        public Rigidbody rb;
 
         private void Start()
         {
-            BoxCollider bullet;
-            bullet = GetComponent<BoxCollider>();
+            BoxCollider bulletColl;
+            bulletColl = GetComponent<BoxCollider>();
+
+            
+                rb= GetComponent<Rigidbody>();
 
         }
 
         private void OnCollisionEnter(Collision collision)
         {
-            Destroy(this.gameObject);
+          
+            
+            Freeze();
+            Invoke(nameof(bulletDestroy), 1.0f);
+
         }
 
+        private void Freeze()
+        {
+            rb.Sleep();
+            Debug.Log("¤l¼u°±¤î");
 
-
-
-
-
-
+        }
+        private void bulletDestroy()
+        {
+            Destroy(this.gameObject);
+        }
 
 
 

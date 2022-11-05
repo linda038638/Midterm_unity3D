@@ -16,26 +16,39 @@ namespace Misun
     public class EnemyFollower : MonoBehaviour
     {
 
+        public static bool isSealed = false;
+        public static string  WhoIsSeald;
 
         public NavMeshAgent agent; //敵人物件
         private GameObject player;
-        //public Transform player;   //玩家位置
-
 
         void Awake()
         {
             agent = GetComponent<NavMeshAgent>();
             player = GameObject.Find("Player");
+            Debug.Log("agent.name is " + agent.name);
+            
         }
-
 
 
 
         void Update()
         {
-            agent.SetDestination(player.transform.position);
-        }
+            if(agent.name == WhoIsSeald)
+            { print("敵人名字一樣!"); }
 
+            if (isSealed && agent.name == WhoIsSeald)
+            {
+                agent.SetDestination(this.transform.position);
+
+            }
+            else
+            {
+                
+                agent.SetDestination(player.transform.position);
+            }
+
+        }
 
 
 

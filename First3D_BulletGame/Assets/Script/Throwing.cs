@@ -50,16 +50,17 @@ namespace Misun
             //生成要丟的物件
             GameObject projectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);
             Debug.Log("生成!");
-            
-            //計數器-1
-            totalThrows--;
-            bulletNumber.text = "符咒：" + totalThrows;
-            
-            //得到剛體元件
-            Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
-
-            if (objectToThrow) //如果子彈還存在 (避免生成碰撞消滅導致程式無法執行)
+            if (objectToThrow != null) //如果子彈還存在 (避免生成碰撞消滅導致程式無法執行)
             {
+                //計數器-1
+                totalThrows--;
+                bulletNumber.text = "符咒：" + totalThrows;
+
+                //得到剛體元件
+                Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+
+
+
                 //方向
                 Vector3 forceDirection = cam.transform.forward;
                 RaycastHit hit;
@@ -73,10 +74,11 @@ namespace Misun
                 Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
                 projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
+
                 
-                Invoke(nameof(ResetThrow), throwcooldown);
             }
-           }
+            Invoke(nameof(ResetThrow), throwcooldown);
+        }
 
         private void ResetThrow()
         {

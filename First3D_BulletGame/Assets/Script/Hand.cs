@@ -32,10 +32,7 @@ namespace Misun
             if(Input.GetMouseButtonDown(0))
             {
                 shoot();
-                /*var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-                bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
-                */
-
+                
                 }
         }
     
@@ -46,7 +43,7 @@ namespace Misun
             RaycastHit hit;
             if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
             {
-                 print(hit.transform.name);
+                print(hit.transform.name);
                 
                 //使用傷害類別
                  EnemyDamage enemyDamage = hit.transform.GetComponent<EnemyDamage>();
@@ -54,6 +51,9 @@ namespace Misun
                  {
                             enemyDamage.TakeDamage(damage);
                  }
+
+
+
             }
                 
         }
