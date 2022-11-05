@@ -45,7 +45,7 @@ namespace Misun
             //得到剛體元件
             Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 
-            if (objectToThrow)
+            if (objectToThrow) //如果子彈還存在 (避免生成碰撞消滅導致程式無法執行)
             {
                 //方向
                 Vector3 forceDirection = cam.transform.forward;
