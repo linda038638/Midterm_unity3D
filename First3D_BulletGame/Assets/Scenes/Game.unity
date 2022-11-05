@@ -7007,7 +7007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1767431077}
-  controlSpeed: 500
+  RLcontrolSpeed: 300
+  UDcontrolSpeed: 200
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
