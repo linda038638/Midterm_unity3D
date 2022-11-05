@@ -14,11 +14,11 @@ namespace Misun
 
         private void Update()
         {
-           // CameraControl();
+           CameraControl();
 
         }
 
-        /*private void CameraControl()
+        private void CameraControl()
         {
             mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * controlSpeed;
             mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * controlSpeed;
@@ -27,7 +27,7 @@ namespace Misun
             player.Rotate(Vector3.up * mouseX);
             transform.localRotation = Quaternion.Euler(LimitRotation, 0, 0);
         }
-        */
+        
 
 
 
