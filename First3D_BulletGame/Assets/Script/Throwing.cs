@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 
 /// <summary>
 /// 丟子彈 https://www.youtube.com/watch?v=F20Sr5FlUlE
@@ -15,9 +17,10 @@ namespace Misun
         public Transform attackPoint;
         public GameObject objectToThrow;
 
-        [Header("設定")]
+        [Header("設定數量和冷卻時間")]
         public int totalThrows;
         public float throwcooldown;
+        public TMP_Text bulletNumber;
 
         [Header("投擲")]
         public float throwForce;
@@ -25,12 +28,17 @@ namespace Misun
 
         bool readToThrow = true;
 
+
+
+
         private void Update()
         {
             if (Input.GetMouseButtonDown(0) && readToThrow && totalThrows>0)
             {
                 Throw();
+                
             }
+
         }
 
 
@@ -42,6 +50,11 @@ namespace Misun
             //生成要丟的物件
             GameObject projectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);
             Debug.Log("生成!");
+            
+            //計數器-1
+            totalThrows--;
+            bulletNumber.text = "符咒：" + totalThrows;
+            
             //得到剛體元件
             Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 
@@ -60,14 +73,10 @@ namespace Misun
                 Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
                 projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
-                totalThrows--;
+                
                 Invoke(nameof(ResetThrow), throwcooldown);
             }
-            
-
-           
-
-        }
+           }
 
         private void ResetThrow()
         {
