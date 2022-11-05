@@ -45,21 +45,25 @@ namespace Misun
             //得到剛體元件
             Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 
-            //方向
-            Vector3 forceDirection = cam.transform.forward;
-            RaycastHit hit;
-            if(Physics.Raycast(cam.position, cam.forward, out hit, 500.0f))
+            if (objectToThrow)
             {
-                forceDirection = (hit.point - attackPoint.position).normalized;
+                //方向
+                Vector3 forceDirection = cam.transform.forward;
+                RaycastHit hit;
+                if (Physics.Raycast(cam.position, cam.forward, out hit, 500.0f))
+                {
+                    forceDirection = (hit.point - attackPoint.position).normalized;
+                }
+
+
+                //加力量
+                Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
+                projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+
+                totalThrows--;
+                Invoke(nameof(ResetThrow), throwcooldown);
             }
-
-
-            //加力量
-            Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
-            projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
-
-            totalThrows--;
-            Invoke(nameof(ResetThrow), throwcooldown);
+            
 
            
 
