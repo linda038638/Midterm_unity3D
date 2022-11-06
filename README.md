@@ -25,22 +25,22 @@
 
 ### B.part:Unity
 #### 1. Background
- 1.1 Import the 3D object from blender without Error
- 1.2 Sculpt the ground in Terrain
- 1.3 Adjust the sky, fog, environment light and color
+ - 1.1 Import the 3D object from blender without Error
+ - 1.2 Sculpt the ground in Terrain
+ - 1.3 Adjust the sky, fog, environment light and color
 
 #### 2. Function  (Remind me how to write the C# Script)
- 2.1 Movement System (CameraControl, PlayerControl)
- 2.2 Attack System (Shooting, collision, explosion or disappear)
- 2.3 EnemyAI System(Follower,damage)
- 2.4 Elae (control Panel, exit, reset)
+ - 2.1 Movement System (CameraControl, PlayerControl)
+ - 2.2 Attack System (Shooting, collision, explosion or disappear)
+ - 2.3 EnemyAI System(Follower,damage)
+ - 2.4 Elae (control Panel, exit, reset)
 
  #### 3. unity setting-
- 3.1 UI
- 3.2 Layer, tag, Hierarchy classfication
- 3.3 Component
- 3.4 Building and export to in webGL(html5)
- 3.5 publish to the webG
+ - 3.1 UI
+ - 3.2 Layer, tag, Hierarchy classfication
+ - 3.3 Component
+ - 3.4 Building and export to in webGL(html5)
+ - 3.5 publish to the webG
 
 
 Reference:
