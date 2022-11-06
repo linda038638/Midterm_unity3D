@@ -14,6 +14,7 @@ namespace Misun
             EnemyFollower.isSealed = true;
             EnemyFollower.WhoIsSeald = this.name;
             Debug.Log("封印" + this.name);
+
             blood -= amount;
             if( blood <=0.0f)
             {
@@ -23,8 +24,8 @@ namespace Misun
 
         private void Die()
         {
-            if(blood ==0.0f) EnemyDieSound();
-            Invoke(nameof(destroy), 2.0f);
+            if(blood == 0.0f) EnemyDieSound();
+            Invoke(nameof(destroy), 1.0f);
             
         }
 

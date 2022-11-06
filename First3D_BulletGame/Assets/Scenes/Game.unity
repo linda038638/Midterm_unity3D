@@ -9505,9 +9505,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 6427dc0d3fcacf14f8daccc8ed2278b8, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.693
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12175,7 +12175,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8ef5e24c8cc02534aa9b07d1f16214bf, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -18917,7 +18917,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 992f4efd2319d1744b0687cc13d1eca1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27971,6 +27971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6853d86c3b5094881ad50f90c90cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyBfx: {fileID: 698924335}
   blood: 50
 --- !u!114 &1823620305
 MonoBehaviour:
@@ -29297,6 +29298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6853d86c3b5094881ad50f90c90cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyBfx: {fileID: 698924335}
   blood: 50
 --- !u!114 &2007102457
 MonoBehaviour:
