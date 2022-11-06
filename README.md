@@ -22,18 +22,18 @@
  5. Pack and Export Setting
 
 ### B.part:Unity
-####Background-
+#### Background-
  1. Import the 3D object from blender without Error
  2. Sculpt the ground in Terrain
  3. Adjust the sky, fog, environment light and color
 
-####Function-  (Remind me how to write the C# Script)
+#### Function-  (Remind me how to write the C# Script)
  1. Movement System (CameraControl, PlayerControl)
  2. Attack System (Shooting, collision, explosion or disappear)
  3. EnemyAI System(Follower,damage)
  4. Elae (control Panel, exit, reset)
 
- ####unity setting-
+ #### unity setting-
  1. UI
  2. Layer, tag, Hierarchy classfication
  3. Component
