@@ -14,7 +14,6 @@
 
 
 ### The learning Target and Game Planning:
- 
 #### A.part:Blender
  1. Lowpoly stylize Modeling
  2. Give it a meterial, UVmap, texture
