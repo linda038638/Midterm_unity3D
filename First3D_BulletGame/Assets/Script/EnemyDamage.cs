@@ -2,8 +2,11 @@
 
 namespace Misun
 {
-    public class EnemyDamage : MonoBehaviour
+    public class EnemyDamage : PlayAudio
     {
+        private void Start()
+        {
+        }
 
         public float blood = 50.0f;
         public void TakeDamage(float amount)
@@ -20,11 +23,15 @@ namespace Misun
 
         private void Die()
         {
-            Destroy(gameObject);
-
+            if(blood ==0.0f) EnemyDieSound();
+            Invoke(nameof(destroy), 2.0f);
+            
         }
 
-
+        private void destroy()
+        {
+            Destroy(gameObject);
+        }
 
 
 
