@@ -39,8 +39,8 @@
  3.1 UI
  3.2 Layer, tag, Hierarchy classfication
  3.3 Component
- 3.4 Building and export to in webGL
- 3.5 publish to the web
+ 3.4 Building and export to in webGL(html5)
+ 3.5 publish to the webG
 
 
 Reference:
