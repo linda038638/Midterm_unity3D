@@ -1,14 +1,14 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 /// <summary>
-/// ¼Ä¤H¦Û°Ê¸òÂÜ
+/// æ•µäººè‡ªå‹•è·Ÿè¹¤
 ///
 /// Nevmesh https://github.com/Unity-Technologies/NavMeshComponents
-/// ¤U¸ü->¸ÑÀ£ÁY->Assest->NavMeshComponents
-/// §â¤¸¥ó©ÔªñunityªºAssest§Y¥i¨Ï¥Î
+/// ä¸‹è¼‰->è§£å£“ç¸®->Assest->NavMeshComponents
+/// æŠŠå…ƒä»¶æ‹‰è¿‘unityçš„Assestå³å¯ä½¿ç”¨
 /// Instructor/// https://www.youtube.com/watch?v=dk9vYAtaH-0
 /// </summary>
 namespace Misun
@@ -19,7 +19,7 @@ namespace Misun
         public static bool isSealed = false;
         public static string  WhoIsSeald;
 
-        public NavMeshAgent agent; //¼Ä¤Hª«¥ó
+        public NavMeshAgent agent; //æ•µäººç‰©ä»¶
         private GameObject player;
 
         void Awake()
@@ -38,20 +38,31 @@ namespace Misun
 
             if (isSealed && agent.name == WhoIsSeald)
             {
-                agent.SetDestination(this.transform.position);
-
+                freeze();     
             }
             else
             {
-                
-                agent.SetDestination(player.transform.position);
+                follow();
             }
 
         }
 
 
+        private void follow()
+        {
+            agent.SetDestination(player.transform.position);
+        }
+        private void freeze()
+        {
+            agent.SetDestination(this.transform.position);
+            Invoke(nameof(resetWhoIsSealed), 3.0f);
+        }
 
-
+        private void resetWhoIsSealed()
+        {
+            WhoIsSeald = "";
+            isSealed = true;
+        }
 
 
 

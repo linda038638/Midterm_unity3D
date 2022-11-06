@@ -1,9 +1,9 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ®gÀ»¨t²Î
+/// å°„æ“Šç³»çµ±
 /// https://www.youtube.com/watch?v=THnivyG0Mvo
 /// https://www.youtube.com/watch?v=EwiUomzehKU simple
 /// </summary>
@@ -11,7 +11,7 @@ namespace Misun
 {
     public class Hand : MonoBehaviour
     {
-        [Header("¤âªº«ü¦V")]
+        [Header("æ‰‹çš„æŒ‡å‘")]
         private float damage = 10.0f;
         private float range = 100.0f;
         public Camera fpsCam;
@@ -40,7 +40,7 @@ namespace Misun
             {
                 print(hit.transform.name);
                 
-                //¨Ï¥Î¶Ë®`Ãş§O
+                //ä½¿ç”¨å‚·å®³é¡åˆ¥
                  EnemyDamage enemyDamage = hit.transform.GetComponent<EnemyDamage>();
                  if (enemyDamage != null)
                  {

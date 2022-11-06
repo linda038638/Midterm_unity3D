@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 
 namespace Misun
 {
@@ -30,7 +30,7 @@ namespace Misun
         private void Freeze()
         {
             rb.Sleep();
-            Debug.Log("§lºu∞±§Ó");
+            Debug.Log("Â≠êÂΩàÂÅúÊ≠¢");
 
         }
         private void bulletDestroy()

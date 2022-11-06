@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Misun
 {
@@ -10,7 +10,7 @@ namespace Misun
         {
             EnemyFollower.isSealed = true;
             EnemyFollower.WhoIsSeald = this.name;
-            Debug.Log("�ʦL" + this.name);
+            Debug.Log("封印" + this.name);
             blood -= amount;
             if( blood <=0.0f)
             {

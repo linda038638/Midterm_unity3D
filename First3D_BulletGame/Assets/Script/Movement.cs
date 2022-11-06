@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Misun
 {
@@ -6,6 +6,7 @@ namespace Misun
     public class Movement : MonoBehaviour
     {
         private CharacterController cc;
+        private AudioSource Bfx;
         [SerializeField]
         private float moveSpeed, jumpSpeed;
         private float horizontalMove, verticalMove;
@@ -21,9 +22,12 @@ namespace Misun
 
 
 
+
         private void Start()
         {
-            cc = GetComponent<CharacterController>();
+            cc = this.GetComponent<CharacterController>();
+            Bfx = this.GetComponent<AudioSource>();
+
         }
 
         private void Update()
@@ -37,6 +41,14 @@ namespace Misun
         {
             horizontalMove = Input.GetAxis("Horizontal") * moveSpeed;
             verticalMove = Input.GetAxis("Vertical") * moveSpeed;
+
+            if (horizontalMove != 0 || verticalMove != 0)
+            {
+                Bfx.mute = false;
+            }
+            else
+            { Bfx.mute = true;
+            }
 
             vec = transform.forward * verticalMove + transform.right * horizontalMove;
             cc.Move(vec * Time.deltaTime);

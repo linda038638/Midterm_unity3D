@@ -1,7 +1,7 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 /// <summary>
 /// 
-/// ©x¤è¤å¥ó https://docs.unity3d.com/ScriptReference/Input.GetAxis.html
+/// å®˜æ–¹æ–‡ä»¶ https://docs.unity3d.com/ScriptReference/Input.GetAxis.html
 /// </summary>
 
 
@@ -11,9 +11,9 @@ namespace Misun
     public class CameraConttroller : MonoBehaviour
     {
         [SerializeField] 
-        private Transform player;//ª±®a¦ì¸m¸ê°T
-        private float mouseX, mouseY; //X¤è¦V¬O¥ª¥k²¾°Ê¡AY¤è¦V¬O¤W¤U²¾°Ê
-        [SerializeField, Header("·Æ¹«ÆF±Ó«×")]
+        private Transform player;//ç©å®¶ä½ç½®è³‡è¨Š
+        private float mouseX, mouseY; //Xæ–¹å‘æ˜¯å·¦å³ç§»å‹•ï¼ŒYæ–¹å‘æ˜¯ä¸Šä¸‹ç§»å‹•
+        [SerializeField, Header("æ»‘é¼ éˆæ•åº¦")]
         private float RLcontrolSpeed;
         [SerializeField]
         private float UDcontrolSpeed;

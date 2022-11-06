@@ -1,26 +1,26 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using TMPro;
 
 /// <summary>
-/// ¥á¤l¼u https://www.youtube.com/watch?v=F20Sr5FlUlE
+/// ä¸Ÿå­å½ˆ https://www.youtube.com/watch?v=F20Sr5FlUlE
 /// </summary>
 namespace Misun
 {
     public class Throwing : MonoBehaviour
     {
 
-        [Header("°Ñ¦Òª«")]
+        [Header("åƒè€ƒç‰©")]
         public Transform cam;
         public Transform attackPoint;
         public Transform spawnRotation;
         public GameObject objectToThrow;
 
-        [Header("³]©w¼Æ¶q©M§N«o®É¶¡")]
+        [Header("è¨­å®šæ•¸é‡å’Œå†·å»æ™‚é–“")]
         public int totalThrows;
         public float throwcooldown;
         public TMP_Text bulletNumber;
 
-        [Header("§ëÂY")]
+        [Header("æŠ•æ“²")]
         public float throwForce;
         public float throwUpwardForce;
 
@@ -45,21 +45,21 @@ namespace Misun
         {
             readToThrow = false;
 
-            //¥Í¦¨­n¥áªºª«¥ó
+            //ç”Ÿæˆè¦ä¸Ÿçš„ç‰©ä»¶
             GameObject projectile = Instantiate(objectToThrow, attackPoint.position, spawnRotation.rotation);
-            Debug.Log("¥Í¦¨!");
-            if (objectToThrow != null) //¦pªG¤l¼uÁÙ¦s¦b (Á×§K¥Í¦¨¸I¼²®ø·À¾É­Pµ{¦¡µLªk°õ¦æ)
+            Debug.Log("ç”Ÿæˆ!");
+            if (objectToThrow != null) //å¦‚æœå­å½ˆé‚„å­˜åœ¨ (é¿å…ç”Ÿæˆç¢°æ’æ¶ˆæ»…å°è‡´ç¨‹å¼ç„¡æ³•åŸ·è¡Œ)
             {
-                //­p¼Æ¾¹-1
+                //è¨ˆæ•¸å™¨-1
                 totalThrows--;
-                bulletNumber.text = "²Å©G¡G" + totalThrows;
+                bulletNumber.text = "ç¬¦å’’ï¼š" + totalThrows;
 
-                //±o¨ì­èÅé¤¸¥ó
+                //å¾—åˆ°å‰›é«”å…ƒä»¶
                 Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 
 
 
-                //¤è¦V
+                //æ–¹å‘
                 Vector3 forceDirection = cam.transform.forward;
                 RaycastHit hit;
                 if (Physics.Raycast(cam.position, cam.forward, out hit, 500.0f))
@@ -68,7 +68,7 @@ namespace Misun
                 }
 
 
-                //¥[¤O¶q
+                //åŠ åŠ›é‡
                 Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
                 projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
