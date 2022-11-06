@@ -1,13 +1,13 @@
 # Midterm_unity3D
  Hello, welcome to My Firse 3D FPS Game.( FirstPerson Shooting Game)
 
-### This game is about a park full of ghosts that suddenly appears, and the nearby residents  invited a chineses priest to sealed those ghosts. 
+ This game is about a park full of ghosts that suddenly appears, and the nearby residents  invited a chineses priest to sealed those ghosts. 
  
  The design of the ghosts is inspired by my group experience at school.
  There are a lot of nasty people who are greedy, lazy, and complaning just like ghosts around my college life.
 
  ----------------------------------------------------------------
-## My Motivation for creating this game: 
+### My Motivation for creating this game: 
 
  Before creating VR game, I should practice how to use the unity3D.
  Hence, I decided to create A FirstPerson Shooting Game first, to learn the skills about Interaction of 3D object.
