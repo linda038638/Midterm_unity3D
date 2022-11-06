@@ -1,7 +1,5 @@
 # Midterm_unity3D
- FirstPerson Shooting Game
-
- Hello, welcome to My Firse 3D FPS Game.
+ Hello, welcome to My Firse 3D FPS Game.( FirstPerson Shooting Game)
 
  This game is about a park full of ghosts that suddenly appears, and the nearby residents  invited a chineses priest to sealed those ghosts. 
  
