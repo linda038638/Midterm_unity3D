@@ -1,0 +1,52 @@
+製作問題集 *表示未解決
+
+-------1.Game Assest----------------------------------------------
+-地形Terrain
+-物件Blender自製建模
+-2D素材用平板畫
+
+問題
+地圖好像畫太大了，到後期覺得整體太寬闊
+下次不要一股腦地set地圖，先把物件碰撞都裝好，或是定生成點，設成prefab
+畫好地形後不知道要去哪裡畫材質 -(Raise or Lower Terrain 小三角形 點下去選texture
+*還沒去學如何製作貼圖、normal map、Mask map
+*Terrian的paint trees無法使用blender的模型，也許是格式錯誤
+blender匯出到unity可能會掉貼圖 -(貼圖要另外用資料夾存好
+blender匯出到unity的材質不可控制，像是emission亮度很低 -(可在unity中新建材質球覆蓋
+物件旋轉有偏差 -(blender匯出前把中心點設好、transform要歸零
+
+-------2.玩家角色控制與移動、丟子彈系統----------------------------------------
+-wasd控制膠囊移動 (Movement)
+-滑鼠控制鏡頭轉動 (CameraController)
+-左鍵控制丟擲子彈 (Throwing)、(Hand):扣血量 與 丟子彈碰撞黏合分開寫->可合併
+
+問題
+子彈生成點讓子彈一生成就跟手碰撞消失 -(設定layer不碰撞
+子彈生成後朝向哪邊無法控制，很醜 -(新增一個SpawanRotation當參考
+子彈碰撞破壞後還有程式在執行想取用導致失誤 -(1.延遲Destroy讓符咒停留2.檢查ObjIsNull
+*player movement 滑鼠控制，非全螢幕時滑鼠飄到視窗外面，導致遊戲暫停
+
+-------3.敵人-------------------------------------------------------
+-自動導航 (Enemy Follower)
+-傷害系統 (Enemy Damage)
+
+問題
+bake地形的時候都看不到烘焙的藍色標記 -(打開Gimzos，在Scene上方最右一個像眼球的東西
+bake地形失敗 -(要把烘焙的地形設定成static，在屬性欄右上角打勾勾
+bake地形連路燈跟椅子都被烘焙 -(地形以外的物件不要static
+
+
+-------4.UI-----------------------------------------------------
+
+
+
+問題
+字體一定要是TMP -(右鍵 - Create - Text Mesh Pro - Font Assest
+字體會缺字
+
+
+
+-------5.其他問題-------------------------------------------------
+//Using VolumetricLight
+Something wrong in Tonemapping/PostEffectsBase script
+I comment out the 97-102 and 237 lines.
