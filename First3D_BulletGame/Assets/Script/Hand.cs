@@ -16,12 +16,7 @@ namespace Misun
         private float range = 100.0f;
         public Camera fpsCam;
 
-        /*
-        public Transform bulletSpawnPoint;
-        public GameObject bulletPrefab;
-        public float bulletSpeed = 10;
-        */
-
+        
         [SerializeField]
         private ParticleSystem magicParticle;
 

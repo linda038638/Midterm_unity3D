@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,10 +5,18 @@ namespace Misun
 {
     public class SwitchScenes : MonoBehaviour
     {
-        public void isSwitchScenes()
+
+
+        
+
+        public void SwitchScenesToGame()
         {
+            print("do");
             SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
+
+
+
 
     }
 

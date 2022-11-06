@@ -34,8 +34,7 @@ namespace Misun
 
         void Update()
         {
-            if(agent.name == WhoIsSeald)
-            { print("敵人名字一樣!"); }
+            
 
             if (isSealed && agent.name == WhoIsSeald)
             {

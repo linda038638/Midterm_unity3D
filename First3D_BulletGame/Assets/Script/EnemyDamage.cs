@@ -10,7 +10,7 @@ namespace Misun
         {
             EnemyFollower.isSealed = true;
             EnemyFollower.WhoIsSeald = this.name;
-
+            Debug.Log("«Ê¦L" + this.name);
             blood -= amount;
             if( blood <=0.0f)
             {

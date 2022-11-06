@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System;
 
 /// <summary>
 /// 丟子彈 https://www.youtube.com/watch?v=F20Sr5FlUlE
@@ -15,6 +12,7 @@ namespace Misun
         [Header("參考物")]
         public Transform cam;
         public Transform attackPoint;
+        public Transform spawnRotation;
         public GameObject objectToThrow;
 
         [Header("設定數量和冷卻時間")]
@@ -28,8 +26,8 @@ namespace Misun
 
         bool readToThrow = true;
 
-
-
+        private Quaternion bulletRotate;
+      
 
         private void Update()
         {
@@ -48,7 +46,7 @@ namespace Misun
             readToThrow = false;
 
             //生成要丟的物件
-            GameObject projectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);
+            GameObject projectile = Instantiate(objectToThrow, attackPoint.position, spawnRotation.rotation);
             Debug.Log("生成!");
             if (objectToThrow != null) //如果子彈還存在 (避免生成碰撞消滅導致程式無法執行)
             {
