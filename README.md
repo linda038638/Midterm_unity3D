@@ -1,6 +1,6 @@
 # Midterm_unity3D
 ## Introduction
-### FirstPerson Shooting Game : ­°§¯°£Å]
+### FirstPerson Shooting Game : é™å¦–é™¤é­”
  Hello, welcome to My First 3D FPS Game.
  
  This game is about a park full of ghosts that suddenly appears, and the nearby residents  invited a chineses priest to sealed those ghosts. 
