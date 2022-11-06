@@ -1,7 +1,7 @@
 # Midterm_unity3D
- ###Hello, welcome to My Firse 3D FPS Game.( FirstPerson Shooting Game)
+## Hello, welcome to My Firse 3D FPS Game.( FirstPerson Shooting Game)
 
- This game is about a park full of ghosts that suddenly appears, and the nearby residents  invited a chineses priest to sealed those ghosts. 
+### This game is about a park full of ghosts that suddenly appears, and the nearby residents  invited a chineses priest to sealed those ghosts. 
  
  The design of the ghosts is inspired by my group experience at school.
  There are a lot of nasty people who are greedy, lazy, and complaning just like ghosts around my college life.
@@ -28,7 +28,7 @@
  2. Sculpt the ground in Terrain
  3. Adjust the sky, fog, environment light and color
 
- -Function------Remind me how to write the C# Script------
+ -Function-  (Remind me how to write the C# Script)
  1. Movement System (CameraControl, PlayerControl)
  2. Attack System (Shooting, collision, explosion or disappear)
  3. EnemyAI System(Follower,damage)
