@@ -35,12 +35,12 @@
  - 2.3 EnemyAI System(Follower,damage)
  - 2.4 Elae (control Panel, exit, reset)
 
-#### 3. unity setting-
- 3.1 UI
- 3.2 Layer, tag, Hierarchy classfication
- 3.3 Component
- 3.4 Building and export to in webGL
- 3.5 publish to the web
+#### 3. unity setting
+-  3.1 UI
+-  3.2 Layer, tag, Hierarchy classfication
+-  3.3 Component
+-  3.4 Building and export to in webGL
+-  3.5 publish to the web
 
 
 Reference:
