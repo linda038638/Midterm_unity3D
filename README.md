@@ -8,13 +8,15 @@
 
  ----------------------------------------------------------------
  My Motivation for creating this game: 
+
  Before creating VR game, I should practice how to use the unity3D.
  Hence, I decided to create A FirstPerson Shooting Game first, to learn the skills about Interaction of 3D object.
+
 
  The learning Target and Game Planning:
  
  A.part:Blender
- 1.Lowpoly stylize Modeling
+ 1.Lowpoly stylize Modeling[br]
  2.Give it a meterial, UVmap, texture
  3.Armature settings and Bone rigging
  4.Animation
