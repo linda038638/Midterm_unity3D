@@ -13,7 +13,7 @@
  Hence, I decided to create A FirstPerson Shooting Game first, to learn the skills about Interaction of 3D object.
 
 
-## The learning Target and Game Planning:
+### The learning Target and Game Planning:
  
 #### A.part:Blender
  1. Lowpoly stylize Modeling
