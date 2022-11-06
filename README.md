@@ -1,7 +1,7 @@
 # Midterm_unity3D
 ## Introduction
-### 降妖除魔
- Hello, welcome to My Firse 3D FPS Game.( FirstPerson Shooting Game)
+### FirstPerson Shooting Game : 降妖除魔
+ Hello, welcome to My Firse 3D FPS Game.
 
  This game is about a park full of ghosts that suddenly appears, and the nearby residents  invited a chineses priest to sealed those ghosts. 
  
