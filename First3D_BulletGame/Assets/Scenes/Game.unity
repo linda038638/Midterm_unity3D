@@ -27262,7 +27262,7 @@ MonoBehaviour:
   totalThrows: 100
   throwcooldown: 0.1
   bulletNumber: {fileID: 1101318663}
-  throwForce: 70
+  throwForce: 130
   throwUpwardForce: 1.99
 --- !u!82 &1767431082
 AudioSource:
