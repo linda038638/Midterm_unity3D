@@ -55,7 +55,7 @@ namespace Misun
         private void freeze()
         {
             agent.SetDestination(this.transform.position);
-            Invoke(nameof(resetWhoIsSealed), 3.0f);
+            Invoke(nameof(resetWhoIsSealed), 4.0f);
         }
 
         private void resetWhoIsSealed()
