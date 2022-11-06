@@ -1,5 +1,5 @@
 # Midterm_unity3D
-## Hello, welcome to My Firse 3D FPS Game.( FirstPerson Shooting Game)
+ Hello, welcome to My Firse 3D FPS Game.( FirstPerson Shooting Game)
 
 ### This game is about a park full of ghosts that suddenly appears, and the nearby residents  invited a chineses priest to sealed those ghosts. 
  
@@ -7,13 +7,13 @@
  There are a lot of nasty people who are greedy, lazy, and complaning just like ghosts around my college life.
 
  ----------------------------------------------------------------
-### My Motivation for creating this game: 
+## My Motivation for creating this game: 
 
  Before creating VR game, I should practice how to use the unity3D.
  Hence, I decided to create A FirstPerson Shooting Game first, to learn the skills about Interaction of 3D object.
 
 
-### The learning Target and Game Planning:
+## The learning Target and Game Planning:
  
 #### A.part:Blender
  1. Lowpoly stylize Modeling
