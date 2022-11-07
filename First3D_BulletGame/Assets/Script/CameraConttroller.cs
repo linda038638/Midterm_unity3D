@@ -30,7 +30,7 @@ namespace Misun
             
             mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * RLcontrolSpeed;
             mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * UDcontrolSpeed;
-           
+            print(mouseX);
 
             LimitRotation -= mouseY;
             LimitRotation = Mathf.Clamp(LimitRotation, -90f, 90f);

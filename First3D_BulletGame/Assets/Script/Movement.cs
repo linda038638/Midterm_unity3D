@@ -8,7 +8,7 @@ namespace Misun
         private CharacterController cc;
         private AudioSource Bfx;
         [SerializeField]
-        private float moveSpeed, jumpSpeed;
+        private float moveSpeed, jumpSpeed, rotateSpeed;
         private float horizontalMove, verticalMove;
         private Vector3 vec;
         public float grivaty;
@@ -27,6 +27,7 @@ namespace Misun
         {
             cc = this.GetComponent<CharacterController>();
             Bfx = this.GetComponent<AudioSource>();
+            Cursor.visible = false;
 
         }
 
@@ -34,6 +35,7 @@ namespace Misun
         {
             CheackIsGround();
             movement();
+            Cursor.lockState = CursorLockMode.Confined;
 
         }
 
@@ -52,6 +54,10 @@ namespace Misun
 
             vec = transform.forward * verticalMove + transform.right * horizontalMove;
             cc.Move(vec * Time.deltaTime);
+
+           // this.gameObject.transform.Rotate(0, Input.GetAxis("Horizontal")*rotateSpeed, 0);
+
+            //跳躍
             if (Input.GetButtonDown("Jump") && isGround)
             {
                 velocity.y = jumpSpeed;
