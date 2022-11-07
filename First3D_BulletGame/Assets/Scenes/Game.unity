@@ -9502,6 +9502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698924334}
   - component: {fileID: 698924335}
+  - component: {fileID: 698924336}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -9622,6 +9623,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &698924336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698924333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0925cc7a5b3fd54b9fcdd8ce27342cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &703830373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dc91a48c853b5144091652f5d06905a5, type: 3}
@@ -27873,10 +27886,10 @@ GameObject:
   - component: {fileID: 1823620299}
   - component: {fileID: 1823620298}
   - component: {fileID: 1823620301}
+  - component: {fileID: 1823620306}
   - component: {fileID: 1823620303}
   - component: {fileID: 1823620305}
   - component: {fileID: 1823620304}
-  - component: {fileID: 1823620306}
   - component: {fileID: 1823620307}
   m_Layer: 8
   m_Name: EnemyRole
@@ -28015,7 +28028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6853d86c3b5094881ad50f90c90cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyBfx: {fileID: 698924335}
   blood: 50
 --- !u!114 &1823620305
 MonoBehaviour:
@@ -28029,7 +28041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c8df777d4c703543a48fe977b098782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyBfx: {fileID: 698924335}
   blood: 50
   whatIsPlayer:
     serializedVersion: 2
@@ -29219,10 +29230,10 @@ GameObject:
   - component: {fileID: 2007102461}
   - component: {fileID: 2007102460}
   - component: {fileID: 2007102459}
+  - component: {fileID: 2007102455}
   - component: {fileID: 2007102458}
   - component: {fileID: 2007102457}
   - component: {fileID: 2007102456}
-  - component: {fileID: 2007102455}
   - component: {fileID: 2007102454}
   m_Layer: 8
   m_Name: EnemyRole (1)
@@ -29347,7 +29358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6853d86c3b5094881ad50f90c90cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyBfx: {fileID: 698924335}
   blood: 50
 --- !u!114 &2007102457
 MonoBehaviour:
@@ -29361,7 +29371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c8df777d4c703543a48fe977b098782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyBfx: {fileID: 698924335}
   blood: 50
   whatIsPlayer:
     serializedVersion: 2

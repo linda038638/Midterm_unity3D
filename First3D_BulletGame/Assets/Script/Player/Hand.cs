@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-/// <summary>
-/// 射擊系統
-/// https://www.youtube.com/watch?v=THnivyG0Mvo
-/// https://www.youtube.com/watch?v=EwiUomzehKU simple
-/// </summary>
+/* 射擊系統
+ https://www.youtube.com/watch?v=THnivyG0Mvo
+ https://www.youtube.com/watch?v=EwiUomzehKU simple
+*/
 namespace Misun
 {
     public class Hand : MonoBehaviour

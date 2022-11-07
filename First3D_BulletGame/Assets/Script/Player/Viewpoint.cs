@@ -1,13 +1,13 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 
 
-//±±¨îµø¨¤¨t²Î
+//æ§åˆ¶è¦–è§’ç³»çµ±
 /// <summary>
-/// §Q¥ÎÂà°Ê±±¨î¨¤¦âµø¨¤¡A¥Î¹«¼Ğ±±¨îµø¨¤ªº¤è¦V¡C
-/// 1.¥ª¥kÂà°Ê¥Î¨¤¦â±±¨î
-/// 2.¤W¤UÂà°Ê¥ÎÄá¼v¾÷±±¨î
-/// °Ñ¦Ò©x¤è¤å¥ó https://docs.unity3d.com/ScriptReference/Input.GetAxis.html
+/// åˆ©ç”¨è½‰å‹•æ§åˆ¶è§’è‰²è¦–è§’ï¼Œç”¨é¼ æ¨™æ§åˆ¶è¦–è§’çš„æ–¹å‘ã€‚
+/// 1.å·¦å³è½‰å‹•ç”¨è§’è‰²æ§åˆ¶
+/// 2.ä¸Šä¸‹è½‰å‹•ç”¨æ”å½±æ©Ÿæ§åˆ¶
+/// åƒè€ƒå®˜æ–¹æ–‡ä»¶ https://docs.unity3d.com/ScriptReference/Input.GetAxis.html
 /// </summary>
 namespace Misun
 {
@@ -16,44 +16,44 @@ namespace Misun
     {
         #region Declare Varible & Component
 
-        //¦Û­q·Æ¹«ÆF±Ó«×
-        [SerializeField, Header("·Æ¹«ÆF±Ó«×")]
+        //è‡ªè¨‚æ»‘é¼ éˆæ•åº¦
+        [SerializeField, Header("æ»‘é¼ éˆæ•åº¦")]
         private float RlControlSpeed;
         [SerializeField]
         private float UdControlSpeed;
 
-        //±o¨ìª±®a¦ì¸m¸ê°T
+        //å¾—åˆ°ç©å®¶ä½ç½®è³‡è¨Š
         [SerializeField]
-        private Transform cam;              //¨ú±oÄá¼v¾÷¦ì¸m¸ê°T
+        private Transform cam;              //å–å¾—æ”å½±æ©Ÿä½ç½®è³‡è¨Š
 
-        //Äá¼v¾÷Âà°Ê
-        private float mouseX, mouseY;          //X¤è¦V¥ª¥kÂà°Ê¡AY¤è¦V¤W¤UÂà°Ê¡A¦¹ÅÜ¼ÆÀx¦s²¾°Êªº¶q
-        private float LimitRotation;           //­­¨îÂà°Êªº¶q
+        //æ”å½±æ©Ÿè½‰å‹•
+        private float mouseX, mouseY;          //Xæ–¹å‘å·¦å³è½‰å‹•ï¼ŒYæ–¹å‘ä¸Šä¸‹è½‰å‹•ï¼Œæ­¤è®Šæ•¸å„²å­˜ç§»å‹•çš„é‡
+        private float LimitRotation;           //é™åˆ¶è½‰å‹•çš„é‡
 
         #endregion
 
-        //¥Dµ{¦¡
+        //ä¸»ç¨‹å¼
         private void Update()
         {
-            ViewpointControl();  //µø¨¤±±¨î
+            ViewpointControl();  //è¦–è§’æ§åˆ¶
         }
 
         #region Method
 
-        //Äá¼v¾÷±±¨î¤èªk
+        //æ”å½±æ©Ÿæ§åˆ¶æ–¹æ³•
         private void ViewpointControl()
         {
-            //Àx¦sÂà°Êªº¶q
+            //å„²å­˜è½‰å‹•çš„é‡
             mouseX = Input.GetAxis("Mouse X") * Time.deltaTime * RlControlSpeed;
             mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * UdControlSpeed;
 
-            //­­¨î¤W¤UÂà°Êªº½d³ò¡AÁ×§KÂ½¨­
+            //é™åˆ¶ä¸Šä¸‹è½‰å‹•çš„ç¯„åœï¼Œé¿å…ç¿»èº«
             LimitRotation -= mouseY;
             LimitRotation = Mathf.Clamp(LimitRotation, -70.0f, 70.0f);
 
-            //Âà°Ê¨¤¦â
+            //è½‰å‹•è§’è‰²
             this.transform.Rotate(Vector3.up * mouseX);
-            //Âà°ÊÄá¼v¾÷
+            //è½‰å‹•æ”å½±æ©Ÿ
             cam.localRotation = Quaternion.Euler(LimitRotation, 0, 0);
 
         }
