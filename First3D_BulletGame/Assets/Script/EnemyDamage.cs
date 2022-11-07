@@ -2,18 +2,19 @@
 
 namespace Misun
 {
-    public class EnemyDamage : PlayAudio
+    public class EnemyDamage : MonoBehaviour
     {
-        private void Start()
-        {
-        }
 
-        public float blood = 50.0f;
+        //敵人狀態
+        [SerializeField, Header("血量")]
+        private float blood = 50.0f;
+        protected bool isSealed = false;
+        protected string WhoIsSeald = "";
+
         public void TakeDamage(float amount)
         {
-            EnemyFollower.isSealed = true;
-            EnemyFollower.WhoIsSeald = this.name;
-            Debug.Log("封印" + this.name);
+            isSealed = true;
+            WhoIsSeald = this.name;
 
             blood -= amount;
             if( blood <=0.0f)
@@ -24,9 +25,11 @@ namespace Misun
 
         private void Die()
         {
-            if(blood == 0.0f) EnemyDieSound();
-            Invoke(nameof(destroy), 1.0f);
-            
+            if (blood == 0.0f)
+            {
+                PlayAudio.EnemyDieSound();
+            }
+            Invoke(nameof(destroy), 1.0f);            
         }
 
         private void destroy()

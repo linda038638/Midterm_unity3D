@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using TMPro;
 
+
+
+//子彈
 /// <summary>
 /// 丟子彈 https://www.youtube.com/watch?v=F20Sr5FlUlE
 /// </summary>
