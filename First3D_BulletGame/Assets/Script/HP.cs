@@ -1,11 +1,12 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 
-//¦å¶q
+//è¡€é‡å’Œé€šé—œè™•ç†
 /// <summary>
-/// ³B²zª±®a¦å¶q³Q¦©¡AÅã¥Ü¦bUI¤W¡A¨Ã¼g³B²z¹CÀ¸µ²§ô±ø¥ó¤§¤@(¦º±¼)
+/// è™•ç†ç©å®¶è¡€é‡è¢«æ‰£ï¼Œé¡¯ç¤ºåœ¨UIä¸Šï¼Œä¸¦å¯«è™•ç†éŠæˆ²çµæŸæ¢ä»¶ä¹‹ä¸€(æ­»æ‰)
 /// /// </summary>
 namespace Misun
 {
@@ -16,31 +17,55 @@ namespace Misun
         #region Declare Varible & Component
 
         [SerializeField]
-        private Slider hpSlider;        //¦å±ø
-        private float clock = 0;        //­p®É¾¹
-        private float duration = 0;     //½w½Ä®É¶¡
+        private Slider hpSlider;        //è¡€æ¢
+        private float clock = 0;        //è¨ˆæ™‚å™¨
+        private float duration = 0;     //ç·©è¡æ™‚é–“
 
+        public static bool IsplayerCatch = false;     //åˆ¤æ–·æ˜¯å¦æŠ“åˆ°æ•µäºº,HPè…³æœ¬æª¢æŸ¥
+        public static int DestroyedEnemyCounter;    
+        [SerializeField]
+        private TMP_Text printEnemyNumber;           //å±•ç¤ºå‰©é¤˜ç¬¦å’’é‡
+
+        private void Awake()
+        {
+            DestroyedEnemyCounter = 4;                  //æ•µäººç¸½é‡
+            printEnemyNumber.text = "å¦–éˆï¼š" + DestroyedEnemyCounter;
+        }
         #endregion
 
-         void Update()
+        void Update()
         {
+            printEnemyNumber.text = "å¦–éˆï¼š" + DestroyedEnemyCounter;
             clock += Time.deltaTime;
-            if(EnemyFollower.playerIsCatch && clock > duration) //³Q§ì¨ì¸ò®É¶¡¨ì®É¦©¦å
+            if (IsplayerCatch)
             {
-                bleed();
-                duration = clock + 0.5f;
+                IsplayerCatch = false;
+                if (clock > duration) //è¢«æŠ“åˆ°è·Ÿæ™‚é–“åˆ°æ™‚æ‰£è¡€
+                {
+                    bleed();          //è©²æµè¡€å›‰
+                    duration = clock + 0.5f;
+                }
             }
+            if(DestroyedEnemyCounter == 0)  ///åˆ¤æ–·é€šé—œæ¢ä»¶
+            {
+                CanvasCountrol canvas = this.GetComponent<CanvasCountrol>();
+                canvas.WinGame();
+            }
+                
+                
         }
 
         #region Method
 
         public void bleed()
-        {  
+        {
             hpSlider.value -= 2.0f;
             if(hpSlider.value <= 0)
             {
-                print("You,re Die!");
+                CanvasCountrol canvas = this.GetComponent<CanvasCountrol>();
+                canvas.LostGame();
             }
+            
         }
 
         #endregion

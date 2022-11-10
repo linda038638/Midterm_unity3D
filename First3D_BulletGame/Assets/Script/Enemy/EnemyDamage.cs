@@ -54,6 +54,7 @@ namespace Misun
         private void destroy()
         {
             Destroy(gameObject);
+            HP.DestroyedEnemyCounter--;
         }
 
         #endregion

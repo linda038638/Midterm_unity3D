@@ -29,7 +29,7 @@ namespace Misun
         public LayerMask  whatIsPlayer;               //圖層含有角色本人、子彈
         public float sightRange;                      //敵人視線範圍
         private bool playerInSightRange = false;      //敵人是否看到角色
-        public static bool playerIsCatch = false;     //判斷是否抓到敵人,HP腳本檢查
+       
 
         //巡邏參考點
         private Vector3 patrolingPathPoint;           //巡邏參考點
@@ -94,12 +94,12 @@ namespace Misun
         private void following()
         {
             agent.SetDestination(player.transform.position);   //追蹤角色
-            if(Physics.CheckSphere(transform.position, 15.0f, whatIsPlayer))
+            if(Physics.CheckSphere(transform.position, 20.0f, whatIsPlayer))
             {
-                //print("抓到你囉!!");
-                playerIsCatch = true;
+                print("抓到你囉!!");
+                HP.IsplayerCatch = true;
 
-            } else playerIsCatch = false;
+            } 
         }
 
         //巡邏

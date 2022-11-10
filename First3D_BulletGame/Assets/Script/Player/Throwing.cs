@@ -30,7 +30,6 @@ namespace Misun
         private float throwForce;               //設定丟出去的力道常數
         [SerializeField]
         private float throwUpwardForce;         //設定丟出去的力道常數
-       // private Vector3 forceDirection;         //丟的力道(assign給剛體實現運動)
 
         //投擲條件
         [SerializeField ,Header("設定數量和冷卻時間")]
@@ -40,23 +39,31 @@ namespace Misun
         private int totalThrows;                //符咒總量
         [SerializeField]
         private TMP_Text printNumber;           //展示剩餘符咒量
-
+        [SerializeField]
+        private GameObject CanvansControl;      //調用結束畫面
+             
         //投擲特效
         [SerializeField]
         private ParticleSystem magicParticle;   //丟的時候出現點光
 
+        private void Awake()
+        {
+            printNumber.text = "符咒：" + totalThrows;
+        }
         #endregion
 
 
         //主程式
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0) && readToThrow && totalThrows>0)
+            if (Input.GetMouseButtonDown(0) && readToThrow && totalThrows>=0)
             {
                 readToThrow = false; 
                 Throw();
                 magicParticle.Play();
+
             }
+            
 
         }
 
@@ -97,6 +104,13 @@ namespace Misun
         {           
             totalThrows--;                                  //計數器-1
             printNumber.text = "符咒：" + totalThrows;       //更改數量
+
+            if (totalThrows < 0)
+            {
+                CanvasCountrol canvas = CanvansControl.GetComponent<CanvasCountrol>();
+                canvas.LostGame();
+            }
+
         }
 
         //重設射擊狀態的方法
