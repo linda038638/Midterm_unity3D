@@ -17,7 +17,7 @@ namespace Misun
         #region Declare Varible & Component
 
         [Header("血量")]
-        private float blood = 50.0f;　　　　 //血量
+        private float blood = 70.0f;　　　　 //血量
         protected bool isSealed = false;    //封印狀態
         protected string WhoIsSeald = "";   //誰被封印
 

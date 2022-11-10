@@ -18116,7 +18116,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8ef5e24c8cc02534aa9b07d1f16214bf, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.521
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -39190,8 +39190,8 @@ MonoBehaviour:
   cam: {fileID: 963194228}
   throwForce: 130
   throwUpwardForce: 1.99
-  throwCooldown: 1
-  totalThrows: 50
+  throwCooldown: 0.2
+  totalThrows: 60
   printNumber: {fileID: 1101318663}
   CanvansControl: {fileID: 782628375}
   magicParticle: {fileID: 1124018864}
