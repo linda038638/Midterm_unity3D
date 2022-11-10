@@ -3,7 +3,12 @@ guid: 81651f0f38163254d9b58e49fb7db972
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoadLight
+    second: {fileID: -8740577074558621488, guid: 162327bc7582add4993acf1c521286db, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

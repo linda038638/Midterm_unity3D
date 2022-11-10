@@ -3,7 +3,22 @@ guid: dc91a48c853b5144091652f5d06905a5
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grassl.001
+    second: {fileID: -7707809221506000364, guid: e67b27f27f6b0db45bafeed8812c9ae0, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: leave
+    second: {fileID: -3802259420799258172, guid: 0cea2f9c1f33c6a4f954d61137331fa7, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: trunk
+    second: {fileID: 6466858025866781746, guid: 81651f0f38163254d9b58e49fb7db972, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

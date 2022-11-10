@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 
+
+
 //符咒碰撞事件
 /// <summary>
-/// 子彈預製物碰撞後停止、停留與消失
+/// 負責處理符咒的行為，子彈預製物碰撞後停止、停留與消失
 /// </summary>
 namespace Misun
 {
