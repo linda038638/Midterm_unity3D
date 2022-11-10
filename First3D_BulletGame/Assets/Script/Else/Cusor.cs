@@ -16,7 +16,8 @@ namespace Misun
 
         void Update()
         {
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.Locked;
+            print(CursorLockMode.Locked);
         }
     }
 }

@@ -21,6 +21,10 @@ namespace Misun
             Win_Pennel.SetActive(false);
         }
 
+        public void Update()
+        {
+           // Cursor.lockState = CursorLockMode.Confined;
+        }
         public void LostGame()
         {
             Game_Pennel.SetActive(false);
